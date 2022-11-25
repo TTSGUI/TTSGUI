@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TTS</title>
+    <link rel="stylesheet" href="tide.css">
+    <style>
+        input, button {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="return tts()">
+        <p>Text to say:</p>
+        <input id="txt" autofocus placeholder="Text to synthesize...">
+        <p></p>
+        <button type="submit" class="btn-primary">&#128266; Synthesize Text</button>
+    </form>
+    <script>
+        function tts() {
+            var msg = new SpeechSynthesisUtterance();
+            msg.text = document.getElementById('txt').value;
+            window.speechSynthesis.speak(msg);
+            return false;
+        }
+    </script>
+</body>
+</html>

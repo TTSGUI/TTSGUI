@@ -1,0 +1,16 @@
+{
+  "name": "tts",
+  "version": "1.0.0",
+  "description": "Text to speech",
+  "main": "main.js",
+  "scripts": {},
+  "author": "mrfakename",
+  "dependencies": {
+    "electron": "^21.3.0",
+    "playwright": "^1.28.0",
+    "user-agents": "^1.0.1205"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.28.0"
+  }
+}
