@@ -5,8 +5,23 @@
     <title>TTS</title>
     <link rel="stylesheet" href="tide.css">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+        html, body {
+            -webkit-app-region: drag;
+            user-select: none;
+            height: 100%;
+        }
+        button {
+            user-select: none;
+        }
+        input {
+            user-select: text;
+        }
         input, button {
             display: block;
+            -webkit-app-region: no-drag;
         }
     </style>
 </head>
@@ -22,6 +37,7 @@
             var msg = new SpeechSynthesisUtterance();
             msg.text = document.getElementById('txt').value;
             window.speechSynthesis.speak(msg);
+            document.getElementById('txt').value = '';
             return false;
         }
     </script>
